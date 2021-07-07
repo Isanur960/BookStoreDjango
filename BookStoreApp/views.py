@@ -85,3 +85,6 @@ def BookList(request):
         main1_l = books
     return render(request,'book-list.html', {'books': main1_l, 'langs':lang_list_d, 'genres':genre_list_d})
 
+def test(request):
+    return render(request, 'test.html')
+
