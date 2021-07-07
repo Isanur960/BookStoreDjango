@@ -1,21 +1,42 @@
+<!DOCTYPE html>
+
 <html>
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <title>Test</title>
+    {% load static %}
+    <link href="{% static 'chosen/chosen.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'chosen/docsupport/style.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'chosen/docsupport/prism.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'chosen/chosen.min.css' %}" rel="stylesheet" type="text/css" />
+    <script src="{% static 'chosen/docsupport/init.js' %}" type="text/javascript"></script>
+    <script src="{% static 'chosen/docsupport/jquery-1.12.4.min..js' %}" type="text/javascript"></script>
+    <script src="{% static 'chosen/docsupport/jquery-3.2.1.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'chosen/docsupport/prism.js' %}" type="text/javascript"></script>
+    <script src="{% static 'chosen/chosen.jquery.js' %}" type="text/javascript"></script>
+    <script src="{% static 'chosen/chosen.jquery.min.js' %}" type="text/javascript"></script>
+
 </head>
-
 <body>
-<select class="js-example-basic-multiple" name="states[]" multiple="multiple">
-  <option value="AL">Alabama</option>
-  <option value="WY">Wyoming</option>
-</select>
-</body>
-<script>
-    $(document).ready(function() {
-    $('.js-example-basic-multiple').select2();
-});
+    <form id="form1">
+    <div>
+<div>
+    <label class="item item-input">
+        <div class="input-label">Enter Your Option</div>
+            <select class="chzn-select" multiple="true" name="faculty" style="width:1000px;">
+                <option value="Option 2.1">Option 2.1</option>
+                <option value="Option 2.2">Option 2.2</option>
+                <option value="Option 2.3">Option 2.3</option>
+            </select>
+    </label>
+</div>
+</ion-content>
+</ion-view>
+    </div>
+    </form>
+    <script type="text/javascript">
+        $(function () {
+            $(".chzn-select").chosen();
+        });
 </script>
-
-
+</body>
 </html>
